@@ -1,7 +1,8 @@
 # mips-asm
-A test repo for mips assembly\
+A test repo for mips assembly
 
-to use create a build directory and run\
+# Running
+use create a build directory and run
 ```sh
 make SOURCE=asm/{asm_file.s}
 ```
