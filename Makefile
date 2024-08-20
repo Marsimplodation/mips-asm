@@ -3,8 +3,9 @@ SOURCE ?= test.s
 BUILD_DIR = build
 
 # Define object and target based on the source file
-OBJECT = $(BUILD_DIR)/$(SOURCE:.s=.o)
-TARGET = $(BUILD_DIR)/$(SOURCE:.s=)
+SOURCE_CLEAN = $(patsubst asm/%,%,$(SOURCE))
+OBJECT = $(BUILD_DIR)/$(SOURCE_CLEAN:.s=.o)
+TARGET = $(BUILD_DIR)/$(SOURCE_CLEAN:.s=)
 
 # Phony targets to always execute
 .PHONY: all run $(TARGET)
